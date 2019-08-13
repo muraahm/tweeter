@@ -13,11 +13,20 @@ html {
 /*
  * Global layout stuff
  */
-
+.logo-text {
+  font-family: 'Bungee', cursive;
+}
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
 }
 
 /*
