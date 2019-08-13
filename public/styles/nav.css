@@ -1,0 +1,12 @@
+nav {
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  color: #fff;
+  padding: 1.5em;
+  z-index: 9000;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+}
