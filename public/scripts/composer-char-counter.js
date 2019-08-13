@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.new-tweet form').on('keydown', 'textarea', function(event) {
+  $('.new-tweet form').on('keydown', 'textarea', function(event) {  
     const max = 140;
     let length = $(this).val().length; 
     if (length <= max) {
