@@ -1,0 +1,15 @@
+header {
+  height: 400px;
+  width: 100%;
+  color: #fff;
+  margin-top: 120px; 
+  background-color: #cc9900;
+}
+header h2 {
+  text-align: center;
+}
+
+header img {
+  margin: 0 auto;
+  display: block;
+}
