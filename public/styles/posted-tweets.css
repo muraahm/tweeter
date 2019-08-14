@@ -1,4 +1,4 @@
-.tweet {
+.article {
   display: block;
   font-weight: 400;
   border: 2px solid rgb(8, 11, 12);
@@ -22,7 +22,7 @@
   margin-left: 1.5%
 }
 
-.tweet:hover {
+.article:hover {
 box-shadow: 0 0 11px rgb(165, 55, 4);
 }
 
@@ -39,12 +39,6 @@ h3 {
   display: inline-block;
 }
 
-.tag {
-  float: right;
-  margin-right: 15px;
-  font-size: 20px;
-  opacity: 0.5;
-}
 
 .footer {
   display: block;
