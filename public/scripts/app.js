@@ -92,7 +92,30 @@ const renderTweets = function (tweets) {
 
 $(document).ready(function() {
   renderTweets(data);
-})
+});
+
+
+$(function() {
+  $('#form').on("submit", function(event) {
+    event.preventDefault();
+    const $form = $(this);
+  const data = $form.serialize();
+    console.log('Button clicked, performing ajax call...');
+    $.ajax({
+      type: 'POST',
+      url: "/tweets/",
+      data: data
+    })
+    .then(function() {
+      console.log('Success: ', data);
+      
+    })
+    .fail(function(err) {
+      console.log(err)
+    });
+  });
+});
+
 
 
 
