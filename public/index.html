@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
@@ -15,12 +16,14 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/posted-tweets.css" type="text/css" />
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@
   <nav>
     <h2 class="logo-text">tweeter</h2>
   </nav>
-  <header>
+  <header class= "top">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -49,6 +52,17 @@
             <span class="counter">140</span>
           </form>
         </section>
+        <section class="tweet">
+            <article>
+                <i class="fas fa-grin-wink"></i>
+              <h3>Ahmed!</h3>
+              <h3 class="tag">@Somebody</h3>
+              <p class="text">Sup!</p>
+              <footer class="footer">10 days ago 
+                <div class="btm-icon"> <i class="fas fa-flag"></i></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i></div>     
+              </footer>
+            </article>
+          </section>
   </main>
 
 </body>
