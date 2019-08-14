@@ -4,29 +4,32 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [{
-    "user": {
-      "name": "Ahmed",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1562517999090
-  }
-];
+// const data = [{
+//     "user": {
+//       "name": "Ahmed",
+//       "avatars": "https://i.imgur.com/73hZDYK.png",
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1562517999090
+//   }
+// ];
+
+
+$(document).ready(function() {
 
 const timeDifference = function(current, previous) {  
   const msPerMinute = 60 * 1000;
@@ -90,12 +93,19 @@ const renderTweets = function (tweets) {
   }
 };
 
-$(document).ready(function() {
-  renderTweets(data);
-});
-
+const loadTweets = function() {
+  return $.ajax({
+    url: '/tweets/',
+    type: "GET",
+    success: function(data) {
+      console.log(data);
+      renderTweets(data);
+    }
+  });
+};
 
 $(function() {
+  loadTweets()
   $('#form').on("submit", function(event) {
     event.preventDefault();
     const $form = $(this);
@@ -114,6 +124,7 @@ $(function() {
       console.log(err)
     });
   });
+});
 });
 
 
