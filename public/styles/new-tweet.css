@@ -6,19 +6,20 @@
   border-right: none;
   border-bottom: 5px solid #545149;
   background-color: transparent;
-  margin-bottom: 0.5em;
+  margin-bottom: 0em;
   height: 50px;
   outline: none;
 }
 
 .new-tweet input {
   border: none;
-  padding: 3px 15px;
+  padding: 3px 20px;
   color: #fff;
   font-family: 'Bungee', cursive;
   background-color: #4056A9;
+  margin-bottom: 3.0em;
 }
 .new-tweet span {
-  float: left;
+  float: right;
   font-family: 'Bungee', cursive;
 }
