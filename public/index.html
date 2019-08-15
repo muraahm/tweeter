@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
+    integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
 
@@ -31,41 +32,42 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <h2 class="logo-text">tweeter</h2>
-    <div class="TweetNav">
-        <a href="#" class="compose"><span>Write</span> a new tweet
-        <br><i class="fas fa-angle-double-down"></i></a>
-      </div>
+    <div class="nav-right">
+      <a class="compose"><strong>Write</strong> a new tweet
+        <br><i href="#" id="arrow-nav" class="fas fa-angle-double-down"></i></a>
+    </div>
   </nav>
-  <header class= "top">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Ahmed</h2>
-      </div>
+  <header class="top">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Ahmed</h2>
+    </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-      <section class="new-tweet">
-          <h2>Compose Tweet</h2>
-          <form id="form" method="POST" action="/tweets/">
-            <textarea id=tweetMsg name="text" placeholder="What are you humming about?"></textarea>
-            <input type="submit" value="Tweet">
-            <span class="counter">140</span>
-          </form>
-        </section>
-        <section class="tweet">
-            <article>
-              <h3></h3>
-              <h3></h3>
-              <p></p>
-              <footer> 
-                <div></div>     
-              </footer>
-            </article>
-          </section>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <p class="err"><span></span> <i class="fas fa-exclamation-triangle"></i></p>
+      <form id="form" method="POST" action="/tweets/">
+        <textarea id=tweetMsg name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span> <!--change to output-->
+      </form>
+    </section>
+    <section class="tweet">
+      <article>
+        <h3></h3>
+        <h3></h3>
+        <p></p>
+        <footer>
+          <div></div>
+        </footer>
+      </article>
+    </section>
   </main>
 
 </body>
