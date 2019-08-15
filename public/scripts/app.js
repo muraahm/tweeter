@@ -68,14 +68,21 @@ const timeDifference = function(current, previous) {
   }
 };
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 const createTweetElement = function (obj) {
   const currentDate = new Date();
+  const text = escape(obj.content.text);
   const $markup =
     $(`<article class="article">
   <img src="${obj.user.avatars}">
   <h3> ${obj.user.name} </h3>
   <h3 class="tag"> ${obj.user.handle} </h3>
-  <p class="text">${obj.content.text}</p>
+  <p class="text">${text}</p>
     <footer class="footer"> ${timeDifference(currentDate, obj.created_at)}
       <div class="btm-icon"> <a href="#"><i class="fas fa-flag"></i></a> <a href="#"><i class="fas fa-retweet"></i></a> <a href="#"><i class="fas fa-heart"></i></a> </div>
     </footer>
