@@ -23,7 +23,7 @@
 }
 
 .article:hover {
-box-shadow: 0 0 11px rgb(165, 55, 4);
+  box-shadow: 0 0 11px rgb(165, 55, 4);
 }
 
 .tag {
@@ -47,6 +47,7 @@ h3 {
   width: 100%;
   align-items: center;
 }
+
 .btm-icon {
   float: right;
   padding: 5px;
