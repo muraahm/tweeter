@@ -98,26 +98,36 @@ const loadTweets = function() {
     url: '/tweets/',
     type: "GET",
     success: function(data) {
-      console.log(data);
+      //console.log(data);
       renderTweets(data);
     }
   });
 };
 
 $(function() {
-  loadTweets()
   $('#form').on("submit", function(event) {
     event.preventDefault();
     const $form = $(this);
   const data = $form.serialize();
-    console.log('Button clicked, performing ajax call...');
+    //console.log('Button clicked, performing ajax call...');
+    const tweetMsg = data.substring(5)
+    if (!tweetMsg) {
+      alert("Tweet box can't be empty!!")
+    }
+    if (tweetMsg.length > 140) {
+      alert("You've reached the max char")
+    }
+    else
+
     $.ajax({
       type: 'POST',
       url: "/tweets/",
       data: data
     })
     .then(function() {
-      console.log('Success: ', data);
+      loadTweets()
+      $('#tweetMsg').val('');
+      //console.log('Success: ', data);
       
     })
     .fail(function(err) {
