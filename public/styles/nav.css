@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
   color: #fff;
   padding: 1.5em;
@@ -9,4 +9,35 @@ nav {
   height: 120px;
   width: 100%;
   background-color: #4056A1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-right {
+  font-size: 1em;
+}
+
+.nav-right span {
+  font-weight: 600;
+}
+
+.nav-right i {
+  color: red;
+  font-size: 0.8em;
+}
+
+.nav-right i {
+  margin-top: 0.5em;
+}
+
+#arrow-nav:hover {
+  padding: 3px;
+}
+
+nav a.compose {
+  padding-top: 18%;
+  text-align: right;
+  color: white;
+  text-decoration: none;
+  display: block;
 }
