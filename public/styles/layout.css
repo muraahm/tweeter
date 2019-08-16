@@ -31,9 +31,9 @@ body {
 }
 
 main {
-  width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
+  margin-top: 8%;
 }
 
 .err {
@@ -43,7 +43,25 @@ main {
   border: 4px solid red;
   padding: 0.5em 1em;
   font-size: 1em;
+  margin-left: 1.5%;
 }
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+.flex { 
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.err {
+  margin-left: 1.5% 
+}
+main {
+  flex: 1 1 50%;
+  padding-right: 25px;
+}
+};
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
