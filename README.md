@@ -6,7 +6,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-Over 1074 window size
+Over 1024 window size
 ![Image description](https://github.com/muraahm/tweeter/blob/master/docs/tweet-box1.png)
 
 Smaller window
