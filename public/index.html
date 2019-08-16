@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css"
     integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
   <!-- Meta Information -->
@@ -37,38 +38,42 @@
         <br><i href="#" id="arrow-nav" class="fas fa-angle-double-down"></i></a>
     </div>
   </nav>
-  <header class="top">
-    <div>
-      <img src="/images/profile-hex.png">
-    </div>
-    <br>
-    <div>
-      <h2>Ahmed</h2>
-    </div>
-  </header>
+  <div class="flex">
+    <header class="top">
+      <div class="author-container">
+        <div>
+          <img src="/images/profile-hex.png">
+        </div>
+        <br>
+        <div>
+          <h2>Ahmed</h2>
+        </div>
+      </div>
+    </header>
 
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <p class="err"><span></span> <i class="fas fa-exclamation-triangle"></i></p>
-      <form id="form" method="POST" action="/tweets/">
-        <textarea id=tweetMsg name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span> <!--change to output-->
-      </form>
-    </section>
-    <section class="tweet">
-      <article>
-        <h3></h3>
-        <h3></h3>
-        <p></p>
-        <footer>
-          <div></div>
-        </footer>
-      </article>
-    </section>
-  </main>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <p class="err"><span></span> <i class="fas fa-exclamation-triangle"></i></p>
+        <form id="form" method="POST" action="/tweets/">
+          <textarea id=tweetMsg name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <section class="tweet">
+        <article>
+          <h3></h3>
+          <h3></h3>
+          <p></p>
+          <footer>
+            <div></div>
+          </footer>
+        </article>
+      </section>
+    </main>
+  </div>
 
 </body>
 
