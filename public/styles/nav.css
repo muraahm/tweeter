@@ -41,3 +41,14 @@ nav a.compose {
   text-decoration: none;
   display: block;
 }
+
+
+/* Desktop Styles */
+@media only screen and (max-width: 1024px) {
+  .compose {
+    display: none;
+  }
+  nav {
+    background-color: #cc9900;
+  }
+};
