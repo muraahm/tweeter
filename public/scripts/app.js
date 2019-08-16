@@ -4,31 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const data = [{
-//     "user": {
-//       "name": "Ahmed",
-//       "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1562517999090
-//   }
-// ];
 
-
+/*time stamp with help from stackoverflow*/
 $(document).ready(function () {
 
   const timeDifference = function (current, previous) {
@@ -86,7 +63,7 @@ $(document).ready(function () {
     <footer class="footer"> ${timeDifference(currentDate, obj.created_at)}
       <div class="btm-icon"> <a href="#"><i class="fas fa-flag"></i></a> <a href="#"><i class="fas fa-retweet"></i></a> <a href="#"><i class="fas fa-heart"></i></a> </div>
     </footer>
-</article>`);
+</article>`); 
     return $markup;
   };
 
@@ -96,7 +73,7 @@ $(document).ready(function () {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     for (const tweet of tweets) {
-      $(".tweet").append(createTweetElement(tweet));
+      $(".tweet").prepend(createTweetElement(tweet)); //reverse sort order
     }
   };
 
@@ -116,7 +93,7 @@ $(document).ready(function () {
 
   $(function () {
     $('#form').on("submit", function (event) {
-      event.preventDefault();
+      event.preventDefault(); // avoid to execute the actual submit of the form.
       const $form = $(this);
       const data = $form.serialize();
       //console.log('Button clicked, performing ajax call...');
@@ -135,12 +112,11 @@ $(document).ready(function () {
             data: data
           })
           .then(function () {
-            loadTweets()
-            $('#tweetMsg').val('');
-            //console.log('Success: ', data);
+            loadTweets()  // reload all tweets
+            $('#tweetMsg').val(''); // clear form after submition
 
           })
-          .fail(function (err) {
+          .fail(function (err) {//request fail catcth
             console.log(err)
           });
       }
