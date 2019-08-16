@@ -1,6 +1,7 @@
+/* Tweet styling */
 .new-tweet textarea {
   font-weight: 600;
-  width: 100%;
+  width: 97%;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -9,6 +10,7 @@
   margin-bottom: 0em;
   height: 50px;
   outline: none;
+  margin-left: 1.5%
 }
 
 .new-tweet input {
@@ -18,9 +20,28 @@
   font-family: 'Bungee', cursive;
   background-color: #4056A9;
   margin-bottom: 3.0em;
+  margin-left: 1.5%
+}
+
+.new-tweet h2 {
+  margin-left: 1.5%
+}
+
+.counter {
+  margin-right: 1.5%;
 }
 
 .new-tweet span {
   float: right;
   font-family: 'Bungee', cursive;
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: 40px;
+  }
+  .new-tweet h2 {
+    margin-left: 1.5%
+  }
 }
