@@ -125,12 +125,14 @@ $(document).ready(function () {
   });
 });
 
-$("#arrow-nav").click(function (event) {
-  event.preventDefault();
-  $(".new-tweet").toggle(200, "swing");
-  $("textarea#text").focus();
-  return false;
-});
+
+$(".new-tweet").hide();
+  $("#arrow-nav").on("click", function() {
+    $(".new-tweet").slideToggle("complete", function() {
+      $(".new-tweet").focus();
+      $(".msg").focus();
+    });
+  });
 
 
 
