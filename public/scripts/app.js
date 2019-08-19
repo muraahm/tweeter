@@ -82,21 +82,18 @@ $(document).ready(function () {
       url: '/tweets/',
       type: "GET",
       success: function (data) {
-        //console.log(data);
+        $(".tweet").empty();
         renderTweets(data);
       }
     });
   };
 
 
-  //setTimeout(function(){ $(".error").slideUp(); }, 1000);
-
   $(function () {
     $('#form').on("submit", function (event) {
       event.preventDefault(); // avoid to execute the actual submit of the form.
       const $form = $(this);
       const data = $form.serialize();
-      //console.log('Button clicked, performing ajax call...');
       const tweetMsg = data.substring(5)
       if (!tweetMsg) {
         $(".err").slideDown();
@@ -116,7 +113,7 @@ $(document).ready(function () {
             $('#tweetMsg').val(''); // clear form after submition
 
           })
-          .fail(function (err) {//request fail catcth
+          .fail(function (err) {//request fail catch
             console.log(err)
           });
       }
@@ -133,26 +130,3 @@ $(".new-tweet").hide();
       $(".msg").focus();
     });
   });
-
-
-
-// // Test / driver code (temporary). Eventually will get this from the server.
-// const tweetData = {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//   "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1461116232227
-// }
-//timeDifference(currentDate, obj.created_at)
-//const currentDate = new Date();
-
-// const $tweet = createTweetElement(tweetData);
-
-// // Test / driver code (temporary)
-// console.log($tweet); // to see what it looks like
-// $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
