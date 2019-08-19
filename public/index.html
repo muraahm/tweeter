@@ -35,7 +35,7 @@
     <h2 class="logo-text">tweeter</h2>
     <div class="nav-right">
       <a class="compose"><strong>Write</strong> a new tweet
-        <br><i href="#" id="arrow-nav" class="fas fa-angle-double-down"></i></a>
+        <br><i id="arrow-nav" class="fas fa-angle-double-down"></i></a>
     </div>
   </nav>
   <div class="flex">
@@ -57,7 +57,7 @@
         <h2>Compose Tweet</h2>
         <p class="err"><span></span> <i class="fas fa-exclamation-triangle"></i></p>
         <form id="form" method="POST" action="/tweets/">
-          <textarea id=tweetMsg name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id=tweetMsg name="text" autofocus class="msg" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
