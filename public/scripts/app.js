@@ -88,6 +88,8 @@ $(document).ready(function () {
     });
   };
 
+  loadTweets()
+
 
   $(function () {
     $('#form').on("submit", function (event) {
@@ -110,7 +112,9 @@ $(document).ready(function () {
           })
           .then(function () {
             loadTweets()  // reload all tweets
-            $('#tweetMsg').val(''); // clear form after submition
+            $('#tweetMsg').val('').trigger('input')// clear form after submition
+            $(".counter").html(140);
+             
 
           })
           .fail(function (err) {//request fail catch
